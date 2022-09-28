@@ -12,5 +12,5 @@ def word_count():
     return len(phrase.split())
 
 #imprime le nombre de mots en string-
-mots = word_count()
+mots = wo+rd_count()
 print("le nombre de mots est : " + str(mots))

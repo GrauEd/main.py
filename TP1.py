@@ -1,5 +1,5 @@
 #Edward Grau gr.401
-#TP1
+#word_count
 
 #permet à l'utilisateur d'écrire la phrase
 phrase = input("Ecrivez une phrase: ")
@@ -8,7 +8,9 @@ phrase = input("Ecrivez une phrase: ")
 print("votre phrase est : " + phrase)
 
 #compteur de mot
-word_count = len(phrase.split())
+def word_count():
+    return len(phrase.split())
 
-#afficher le nombre de mots en string
-print("le nombre de mots est : " + str(word_count))
+#imprime le nombre de mots en string-
+mots = word_count()
+print("le nombre de mots est : " + str(mots))

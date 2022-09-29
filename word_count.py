@@ -7,10 +7,10 @@ phrase = input("Ecrivez une phrase: ")
 #afficher la phrase du input
 print("votre phrase est : " + phrase)
 
-#compteur de mot
-def word_count():
+#prend l`input et envoit le nombre de mots des mots à l'utilisateur
+def word_count(phrase):
     return len(phrase.split())
 
-#imprime le nombre de mots en string-
-mots = wo+rd_count()
+#imprime le nombre de mots en string
+mots = word_count(phrase)
 print("le nombre de mots est : " + str(mots))

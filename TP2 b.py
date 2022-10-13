@@ -10,18 +10,19 @@ while True:
     Essai = int(input("Entrez votre essai : "))
     nb_essais = nb_essais+1
 
+    print(str(nombre)+str(Essai))
+    if Essai > nombre:
+        print("Mauvais choix, le nombre est plus petit que : " + str(Essai))
+        print("Nombre d'éssais : " + str(nb_essais))
 
-    if Essai < nombre:
-        print("Mauvais choix, le nombre est plus petit que" + str(Essai))
-        input("Entrez votre essai : ")
 
-    elif Essai > nombre:
-        print("Mauvaise réponse, le nombre est plus grand que" + str(Essai))
-        input("Entrez votre essai : ")
+    elif Essai < nombre:
+        print("Mauvaise réponse, le nombre est plus grand que : " + str(Essai))
+        print("Nombre d'éssais : " + str(nb_essais))
 
     elif Essai == nombre:
         print("Bravo! Bonne réponse")
-        print('Vous avez réussi en :' + nb_essais)
+        print('Vous avez réussi en : ' + str(nb_essais))
 
     replay = input('Veux-tu rejouer? (y/n)')
 

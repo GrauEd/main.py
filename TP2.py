@@ -1,12 +1,10 @@
 #Edward Grau
-#TP2 #1
+#TP2 c)
 #gr.401
 
-print("Hello, World")
+etoile = "*"
+nbr=11
 
-
-b = input("Nom d'utilisateur : ")
-
-print("Votre nom d'utilisateur est : " + b)
-
-
+while nbr >= 0: #boucle
+    print(nbr * etoile) #imprimer les étoiles
+    nbr -= 1 #réduire le nombre d'étoiles

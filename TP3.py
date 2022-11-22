@@ -12,3 +12,10 @@ menu = input("""Que voulez-vous faire ?
 	4- Quitter la partie""")
 
 if menu = "1":
+    def partie():
+
+    def opposant():
+        if de <= 4:
+            niveau_vie -= 4
+        elif de >= 5:
+            niveau_vie += 4

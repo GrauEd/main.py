@@ -77,16 +77,33 @@ class NPC:
         print("Sa profession est: ", self.profession)
 
 class Kobold(NPC):
-    def atttaque(self):
-        self.cible = NPC
+    def atttaque(self, cible = NPC):
+        r_de = random.randint(1,20)
 
-    def subir_des_dommages(self):
+        if r_de == 20
+            cible.subir_des_dommages(random.randint(0,8))
+
+        elif r_de =>
+    def subir_des_dommages(self, qte_dommage):
         self.d = random.randint(0,6)
 
 
 class Hero(NPC):
-    def atttaque(self):
+    def atttaque(self, cible = NPC):
         self.cible = NPC
 
-    def subir_des_dommages(self):
-        self.d = random.randint(0,6)
+    def subir_des_dommages(self, dmg):
+        self.pv -= dmg
+
+
+hero1 = Hero("Bob", "Humain", "Homo sapiens", "Etudiant")
+hero1.afficher_caracteristiques()
+
+kobold1  = Kobold("Kob", "Kobold", "Monstre", "Joueur")
+kobold1.afficher_caracteristiques()
+
+kobold.attaquer(hero1)
+hero1.subir_des_dommages()
+
+hero1.attaquer(kobold)
+kobold1.subir_des_dommages()

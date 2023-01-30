@@ -93,3 +93,8 @@ class Hero(NPC):
         return
 
 
+h = Hero()
+k = Kobold()
+h.afficher_caracteristiques()
+k.attaquer(h)
+h.afficher_caracteristiques()

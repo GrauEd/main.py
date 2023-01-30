@@ -4,7 +4,7 @@
 
 from random import *
 def de():
-    variable = (random.randint(1, 6) for _ in range(4))
+    variable = [random.randint(1, 6) for _ in range(4)]
     variable.sort()
     variable = variable[:3]
     return sum(variable)

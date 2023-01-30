@@ -3,45 +3,31 @@
 #Exercises POO 2
 
 from random import *
-
+def de():
+    variable = (random.randint(1, 6) for _ in range(4))
+    variable.sort()
+    variable = variable[:3]
+    return sum(variable)
 class NPC:
     def __init__(self):
 
         #Force
-        self.f = (random.randint(1, 6) for _ in range(4))
-        self.f.sort()
-        self.f = self.f[:3]
-        self.f = sum(self.f)
+        self.f = de()
 
         #Agilité
-        self.a = (random.randint(1, 6) for _ in range(4))
-        self.a.sort()
-        self.a = self.a[:3]
-        self.a = sum(self.a)
+        self.a = de()
 
         #Constitution
-        self.co = (random.randint(1, 6) for _ in range(4))
-        self.co.sort()
-        self.co = self.co[:3]
-        self.co = sum(self.co)
+        self.co = de()
 
         #Intelligence
-        self.i =  self.i = (random.randint(1, 6) for _ in range(4))
-        self.i.sort()
-        self.i = self.i[:3]
-        self.i = sum(self.i)
+        self.i = de()
 
         #Sagesse
-        self.s = (random.randint(1, 6) for _ in range(4))
-        self.s.sort()
-        self.s = self.s[:3]
-        self.s = sum(self.s)
+        self.s = de()
 
         #Charisme
-        self.ca = (random.randint(1, 6) for _ in range(4))
-        self.ca.sort()
-        self.ca = self.ca[:3]
-        self.ca = sum(self.ca)
+        self.ca = de()
 
         #classe d’armure (1d12)
         self.armure = random.randint(1, 12)
@@ -77,33 +63,33 @@ class NPC:
         print("Sa profession est: ", self.profession)
 
 class Kobold(NPC):
+    def __init__(self):
+        super().__init__()
     def atttaque(self, cible = NPC):
-        r_de = random.randint(1,20)
-
-        if r_de == 20
-            cible.subir_des_dommages(random.randint(0,8))
-
-        elif r_de =>
-    def subir_des_dommages(self, qte_dommage):
-        self.d = random.randint(0,6)
-
-
-class Hero(NPC):
-    def atttaque(self, cible = NPC):
-        self.cible = NPC
+        return
 
     def subir_des_dommages(self, dmg):
         self.pv -= dmg
 
 
-hero1 = Hero("Bob", "Humain", "Homo sapiens", "Etudiant")
-hero1.afficher_caracteristiques()
 
-kobold1  = Kobold("Kob", "Kobold", "Monstre", "Joueur")
-kobold1.afficher_caracteristiques()
 
-kobold.attaquer(hero1)
-hero1.subir_des_dommages()
+class Hero(NPC):
+    def __init__(self):
+        super().__init__()
+    def atttaque(self, cible=NPC):
+        r_de = random.randint(1, 20)
 
-hero1.attaquer(kobold)
-kobold1.subir_des_dommages()
+        if r_de == 20:
+            cible.subir_des_dommages(random.randint(1, 8))
+
+        elif r_de(2, 19) >= cible.armure:
+            cible.subir_des_dommages(random.randint(1, 6))
+
+        else:
+            cible.subir_des_dommages(0)
+
+    def subir_des_dommages(self, dmg):
+        return
+
+

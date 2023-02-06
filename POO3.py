@@ -2,6 +2,7 @@
 #gr.401
 #Exercises POO 2
 
+#fonction utilisé pour le dé et le catactéristiques
 from random import *
 def de():
     variable = [random.randint(1, 6) for _ in range(4)]
@@ -47,7 +48,7 @@ class NPC:
         #profession (guerrier, voleur, etc.) (chaîne de caractères)
         self.profession = str
 
-
+#imprimer les caractéristiques
     def printStat(self):
         print("Sa force est: ", self.f)
         print("Son agilité est: ", self.a)
@@ -61,38 +62,38 @@ class NPC:
         print("Son espèce est: ", self.espece)
         print("Ses pv sont: ", self.pv)
         print("Sa profession est: ", self.profession)
-
+#classe kobold qui hérite de NPC
 class Kobold(NPC):
     def __init__(self):
         super().__init__()
     def atttaque(self, cible = NPC):
         return
-
+#fonction que fait subir les dommages
     def subir_des_dommages(self, dmg):
         self.pv -= dmg
 
 
 
-
+#classe Hero qui herite de NPC
 class Hero(NPC):
     def __init__(self):
         super().__init__()
     def atttaque(self, cible=NPC):
         r_de = random.randint(1, 20)
-
+#Coup critique
         if r_de == 20:
             cible.subir_des_dommages(random.randint(1, 8))
-
+#Coup régulier
         elif r_de(2, 19) >= cible.armure:
             cible.subir_des_dommages(random.randint(1, 6))
-
+#Coup nul
         else:
             cible.subir_des_dommages(0)
 
     def subir_des_dommages(self, dmg):
         return
 
-
+#tester le code
 h = Hero()
 k = Kobold()
 h.afficher_caracteristiques()

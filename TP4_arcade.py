@@ -1,28 +1,60 @@
+import arcade
+import random
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+COLORS = []
+
 
 class MyGame(arcade.Window):
-   def __init__(self, width, height, title):
-       # Call the parent class's init function
-       super().__init__(width, height, title)
+    def __init__(self):
+        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, "Exercice #1")
+        pass
+
+    def setup(self):
+        pass
+
+    def on_draw(self):
+        arcade.start_render()
+
+        pass
 
 
 def main():
-    window = MyGame(640, 480, "Drawing Example")
-    arcade.start_render()
-    for i in range(20):
-        arcade.draw_circle_filled(random.randint(50,540), random.randint(50, 380), random.randint(10,50), (random.randint(130,540),random.randint(1,380), random.randint(50,540)))
+    my_game = MyGame()
+    my_game.setup()
+
     arcade.run()
+
 
 main()
 
-COLORS = [arcade.color.BLUE, arcade.color.FANDANGO_PINK,
-arcade.color.FRENCH_ROSE, arcade.color.GOLDEN_POPPY]
 
 class Ball:
-    rayon = random.randint(10, 30)
-    center_x = random.randint(100,150)
-    center_y = random.randint(100,150)
+    rayon_cercle = random.randint(10, 30)
+    cercle_x = random.randint(100,150)
+    cercle_y = random.randint(100,150)
     color = random.choice(COLORS)
     cercle = Cercle(rayon, center_x, center_y, color)
     self.liste_cercles.append(cercle)
+
+
+
+cercle_x += cercle_change_x
+cercle_y += cercle_change_y
+def on_update:
+
+    cercle_change_x = 3  # Nombre d'unité pour le déplacement sur l'axe des X
+    cercle_change_y = 3  # Nombre d'unité pour le déplacement sur l'axe des Y
+
+    if cercle_x < rayon_cercle:
+        cercle_x *= -1
+    if cercle_x > SCREEN_WIDTH - rayon_cercle:
+	pass
+    if cercle_y < rayon_cercle:
+	pass
+    if cercle_y > SCREEN_HEIGHT - rayon_cercle:
+	pass
 
 

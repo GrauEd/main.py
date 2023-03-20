@@ -7,7 +7,7 @@ class MyGame(arcade.Window):
        super().__init__(width, height, title)
 
 
-def main():
+def mygame():
     window = MyGame(640, 480, "Drawing Example")
     arcade.start_render()
     for i in range(20):
@@ -15,8 +15,5 @@ def main():
     arcade.finish_render()
     arcade.run()
 
-main()
 
-
-
-
+mygame()

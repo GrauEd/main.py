@@ -1,4 +1,4 @@
-import arcadeimport arcade
+import arcade
 import random
 
 SCREEN_WIDTH = 800
@@ -32,6 +32,11 @@ class MyGame(arcade.Window):
            color = random.choice(COLORS)
            self.liste_cercles.append(Cercle(rayon, center_x, center_y, color))
 
+   def on_update:
+
+       cercle_change_x = 3  # Nombre d'unité pour le déplacement sur l'axe des X
+       cercle_change_y = 3  # Nombre d'unité pour le déplacement sur l'axe des Y
+
    def on_draw(self):
        arcade.start_render()
 
@@ -55,7 +60,6 @@ def main():
    my_game.setup()
 
    arcade.run()
-
 
 main()
 
